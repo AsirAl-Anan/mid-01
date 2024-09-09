@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <script src="https://kit.fontawesome.com/a3592fbd7b.js" crossorigin="anonymous"></script>
+    
+  </head>
+  <body class="bg-gray-100">
+    <!-- navbar -->
+
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center py-4 md:py-6">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img src="../img/logo/Adidas_Logo.png" alt="Logo" class="h-10">
+            </div>
+    
+            <!-- Search Bar -->
+            <div class="relative flex-1 hidden md:block mx-5">
+              <div class="flex items-center">
+                <input type="text" placeholder='Search "Sneakers"'
+                  class="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+                <button class="absolute inset-y-0 right-0 flex items-center pr-3 text-yellow-600">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+    
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+              <a href="#" class="text-gray-600 hover:text-gray-800 hidden md:inline-block">
+                <i class="fa-regular fa-message"></i>
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-800 hidden md:inline-block">
+                <i class="fa-regular fa-user"></i>
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-800 relative " id="cartToggle">
+                <i class="fa-solid fa-cart-shopping text-xl"  ></i>
+                <span class="absolute top-4 left-3 inline-block w-5 h-5 text-xs font-bold text-white bg-red-600 rounded-full text-center "  id="cartCount">
+                  0
+                </span>
+              </a>
+              
+              <button class="text-gray-600 hover:text-gray-800 md:hidden mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Navbar Links -->
+        <nav class="bg-gray-100 hidden md:block">
+          <div class="container mx-auto px-4 py-2 flex justify-center space-x-8">
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">BEST SELLER</a>
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">RECENTLY LAUNCHED</a>
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">ALL PRODUCTS</a>
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">SPORTS</a>
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">CONTACT US</a>
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">ABOUT US</a>
+          </div>
+        </nav>
+    
+        <!-- Small/Medium Device Searchbar Navbar -->
+        <nav class="bg-gray-100 md:hidden">
+          <div class="container mx-auto px-4 py-2 flex items-center">
+            <div class="relative flex-1">
+              <div class="flex items-center">
+                <button class="absolute inset-y-0 left-0 flex items-center pl-3 text-yellow-600">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" placeholder='Search "Sneakers"'
+                  class="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+              </div>
+            </div>
+          </div>
+        </nav>
+    
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+          <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">BEST SELLER</a>
+            <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">RECENTLY LAUNCHED</a>
+            <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">ALL PRODUCTS</a>
+            <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">SPORTS</a>
+            <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">CONTACT US</a>
+            <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">ABOUT US</a>
+          </div>
+        </div>
+      </header>
+    
+    
+    <!-- Container -->
+    <div class="container mx-auto py-8">
+      
+       
+
+        <!-- Products Section -->
+        <div >
+          <h2 class="font-semibold text-lg mb-4">419 products</h2>
+
+          <!-- Product Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+            <!-- Products -->
+            <div class="bg-white shadow p-4 flex flex-col">
+              <div
+                class="h-[350px] w-full flex items-center justify-center mb-4"
+              >
+                <img
+                  src="../img/products/shoe1.png"
+                  alt="Product 1"
+                  class="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div class="flex-grow">
+                <p class="text-sm text-gray-500">SAVE 50%</p>
+                <h3 class="text-lg font-bold">
+                   Spectra Men's Sneakers
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Kick Up Your Game with Comfy Clouds and Edgy Vibes
+                </p>
+                <p class="text-lg font-semibold mt-1">
+                  <span class="text-3xl inline">৳</span> 2,499.00
+                  <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 4,999.00
+                  </span>
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button 
+                  class="bg-black text-white text-sm px-3 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300 add-to-cart-btn" 
+                  data-id="1"
+                  data-name=" Spectra Men's Sneakers" 
+                  data-price="2499.00" 
+                  data-image="../img/products/shoe1.png""
+                >
+                  Add to Cart
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="bg-orange-500 text-white text-sm px-1 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300"
+                >
+                  Buy Now!
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow p-4 flex flex-col">
+              <div
+                class="h-[350px] w-full flex items-center justify-center mb-4"
+              >
+                <img
+                  src="../img/products/shoe2.png"
+                  alt="Product 1"
+                  class="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div class="flex-grow">
+                <p class="text-sm text-gray-500">SAVE 50%</p>
+                <h3 class="text-lg font-bold">
+                  Nike Zoom Vomero 5
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, impedit?
+                </p>
+                <p class="text-lg font-semibold mt-1">
+                  <span class="text-3xl inline">৳</span> 3,499.00
+                  <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 5,999.00
+                  </span>
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button
+                  class="bg-black text-white text-sm px-3 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300 add-to-cart-btn"
+                  data-id="2"
+                  data-name="Nike Zoom Vomero 5" 
+                  data-price="3499.00" 
+                  data-image="../img/products/shoe2.png""
+                >
+                  Add to Cart
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="bg-orange-500 text-white text-sm px-1 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300"
+                >
+                  Buy Now!
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow p-4 flex flex-col">
+              <div
+                class="h-[350px] w-full flex items-center justify-center mb-4"
+              >
+                <img
+                  src="img/products/shoe3.png"
+                  alt="Product 1"
+                  class="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div class="flex-grow">
+                <p class="text-sm text-gray-500">SAVE 30%</p>
+                <h3 class="text-lg font-bold">
+                   P-6000 Premium Men's Sneakers
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum perferendis itaque saepe fugit! Distinctio dolorum illum consequatur debitis.
+                </p>
+                <p class="text-lg font-semibold mt-1">
+                  <span class="text-3xl inline">৳</span> 3,499.00
+                  <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 4,999.00
+                  </span>
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button
+                  class="bg-black text-white text-sm px-3 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300 add-to-cart-btn"
+                  data-id="3"
+                  data-name="  P-6000 Premium Men's Sneakers" 
+                  data-price="3499.00" 
+                  data-image="../img/products/shoe3.png""
+                >
+                  Add to Cart
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="bg-orange-500 text-white text-sm px-1 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300 "
+                >
+                  Buy Now!
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow p-4 flex flex-col">
+              <div
+                class="h-[350px] w-full flex items-center justify-center mb-4"
+              >
+                <img
+                  src="img/products/shoe4.png"
+                  alt="Product 1"
+                  class="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div class="flex-grow">
+                <p class="text-sm text-gray-500">SAVE 30%</p>
+                <h3 class="text-lg font-bold">
+                  Nike Phantom GX 2 Elite
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, dolores officiis fugit alias dolor corrupti recusandae similique eaque quidem ab!
+                </p>
+                <p class="text-lg font-semibold mt-1">
+                  <span class="text-3xl inline">৳</span> 6,499.00
+                  <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 8,999.00
+                  </span>
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button
+                  class="bg-black text-white text-sm px-3 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300 add-to-cart-btn"
+                  data-id="4"
+                  data-name="Nike Phantom GX 2 Elite" 
+                  data-price="6499.00" 
+                  data-image="../img/products/shoe4.png""
+                >
+                  Add to Cart
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="bg-orange-500 text-white text-sm px-1 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300"
+                >
+                  Buy Now!
+                </button>
+              </div>
+            </div>
+            <div class="bg-white shadow p-4 flex flex-col"></div>
+              <div
+                class="h-[350px] w-full flex items-center justify-center mb-4"
+              >
+                <img
+                  src="img/products/shoe4.png"
+                  alt="Product 1"
+                  class="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div class="flex-grow">
+                <p class="text-sm text-gray-500">SAVE 30%</p>
+                <h3 class="text-lg font-bold">
+                  Nike Phantom GX 2 Elite
+                </h3>
+                <p class="text-sm text-gray-600">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, dolores officiis fugit alias dolor corrupti recusandae similique eaque quidem ab!
+                </p>
+                <p class="text-lg font-semibold mt-1">
+                  <span class="text-3xl inline">৳</span> 6,499.00
+                  <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 8,999.00
+                  </span>
+                </p>
+              </div>
+              <div class="flex justify-between items-center mt-4">
+                <button
+                  class="bg-black text-white text-sm px-3 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300 add-to-cart-btn"
+                  data-id="4"
+                  data-name="Nike Phantom GX 2 Elite" 
+                  data-price="6499.00" 
+                  data-image="../img/products/shoe4.png""
+                >
+                  Add to Cart
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="bg-orange-500 text-white text-sm px-1 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300"
+                >
+                  Buy Now!
+                </button>
+              </div>
+            </div>
+            <!--  products end  -->
+          </div>
+        </div>
+      </div>
+   <!-- Cart Drawer -->
+
+
+
+    </div>
+    <div class="fixed inset-y-0 right-0 w-full max-w-xs bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50" id="cartDrawer">
+        <div class="h-full flex flex-col">
+            <div class="px-4 py-5 bg-gray-100 flex justify-between items-center">
+                <h2 class="text-lg font-medium text-gray-900">Your Cart</h2>
+                <button id="closeCart" class="text-gray-400 hover:text-gray-500">
+                    <span class="sr-only">Close panel</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="flex-1 py-6 overflow-y-auto px-4" id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="border-t border-gray-200 py-6 px-4 sm:px-6">
+                <div class="flex justify-between text-base font-medium text-gray-900">
+                    <p>Subtotal</p>
+                    <p id="cartTotal">$0.00</p>
+                </div>
+                <p class="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                <div class="mt-6">
+                    <a href="#" class="flex justify-center items-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">Checkout</a>
+                </div>
+                <div class="mt-6 flex justify-center text-sm text-center text-gray-500">
+                    <p>
+                        or <button type="button" class="text-indigo-600 font-medium hover:text-indigo-500" id="continueShopping">Continue Shopping<span aria-hidden="true"> &rarr;</span></button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    // Cart functionality
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartDrawer = document.getElementById('cartDrawer');
+const cartToggle = document.getElementById('cartToggle');
+const closeCart = document.getElementById('closeCart');
+const continueShopping = document.getElementById('continueShopping');
+const cartItems = document.getElementById('cartItems');
+const cartTotal = document.getElementById('cartTotal');
+const cartCount = document.getElementById('cartCount');
+
+function updateCart() {
+    cartItems.innerHTML = '';
+    let total = 0;
+    cart.forEach((item, index) => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('flex', 'py-6');
+        itemElement.innerHTML = `
+            <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+                <img src="${item.image}" alt="${item.name}" class="h-full w-full object-cover object-center">
+            </div>
+            <div class="ml-4 flex flex-1 flex-col">
+                <div>
+                    <div class="flex justify-between text-base font-medium text-gray-900">
+                        <h3>${item.name}</h3>
+                        <p class="ml-4">৳${item.price}</p>
+                    </div>
+                </div>
+                <div class="flex flex-1 items-end justify-between text-sm">
+                    <div class="flex items-center">
+                        <button onclick="changeQuantity(${index}, -1)" class="font-medium text-indigo-600 hover:text-indigo-500 px-2">-</button>
+                        <p class="text-gray-500 px-2">${item.quantity}</p>
+                        <button onclick="changeQuantity(${index}, 1)" class="font-medium text-indigo-600 hover:text-indigo-500 px-2">+</button>
+                    </div>
+                    <button type="button" onclick="removeItem(${index})" class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                </div>
+            </div>
+        `;
+        cartItems.appendChild(itemElement);
+        total += item.price * item.quantity;
+    });
+    cartTotal.textContent = `৳${total.toFixed(2)}`;
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
+function addToCart(product) {
+    const existingItem = cart.find(item => item.id === product.id);
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
+    updateCart();
+    openCart();
+}
+
+function changeQuantity(index, change) {
+    cart[index].quantity += change;
+    if (cart[index].quantity <= 0) {
+        removeItem(index);
+    } else {
+        updateCart();
+    }
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+function openCart() {
+    cartDrawer.classList.remove('translate-x-full');
+}
+
+function closeCartDrawer() {
+    cartDrawer.classList.add('translate-x-full');
+}
+
+cartToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    openCart();
+});
+
+closeCart.addEventListener('click', closeCartDrawer);
+continueShopping.addEventListener('click', closeCartDrawer);
+
+// Add event listeners to your "Add to Cart" buttons
+document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const product = {
+            id: button.dataset.id,
+            name: button.dataset.name,
+            price: parseFloat(button.dataset.price),
+            image: button.dataset.image
+        };
+        addToCart(product);
+    });
+});
+
+// Initial cart update
+updateCart();
+   </script>
+   
+  </body>
+</html>

@@ -1,0 +1,76 @@
+
+
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a3592fbd7b.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <!-- Small/Medium Device Searchbar Navbar -->
+
+</head>
+<body>
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex justify-between items-center">
+          <h2 class="text-2xl font-semibold">Featured Products</h2>
+          <div>
+            <label class="font-medium">Sort by: </label>
+            <select class="border rounded px-2 py-1">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+      
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+          <!-- Product Card -->
+          <div class="border rounded-lg shadow-lg p-4">
+            <img src="shoe-image1.jpg" alt="Bacca Bucci Spectra Men's" class="w-full h-48 object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold">Bacca Bucci Spectra Men's</h3>
+              <p class="text-gray-600 text-sm">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500 font-semibold text-lg">Rs. 2,499.00</span>
+                <span class="text-gray-500 line-through ml-2">Rs. 4,999.00</span>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500">★★★★★</span>
+                <span class="text-sm text-gray-600 ml-2">(1)</span>
+              </div>
+              <div class="mt-4 flex justify-between">
+                <button class="bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+                <button class="bg-green-500 text-white px-3 py-2 rounded hover:bg-green-600">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Repeat for each product -->
+          <div class="border rounded-lg shadow-lg p-4">
+            <img src="shoe-image2.jpg" alt="Bacca Bucci High-top" class="w-full h-48 object-cover rounded-lg">
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold">Bacca Bucci High-top SKYLINE</h3>
+              <p class="text-gray-600 text-sm">Modern Comfort Meets Urban Cool</p>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500 font-semibold text-lg">Rs. 1,799.00</span>
+                <span class="text-gray-500 line-through ml-2">Rs. 3,499.00</span>
+              </div>
+              <div class="flex items-center mt-2">
+                <span class="text-yellow-500">★★★★★</span>
+                <span class="text-sm text-gray-600 ml-2">(1)</span>
+              </div>
+              <div class="mt-4 flex justify-between">
+                <button class="bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600">Add to Cart</button>
+                <button class="bg-green-500 text-white px-3 py-2 rounded hover:bg-green-600">Buy Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for remaining products -->
+        </div>
+      </div>
+      
+</body>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k6Yf6s4nXr2nKUW91VmBrpEY5Hk1XG4nmdZIQJ4NeHh2UPTHsK2Ks5hQxYb8TvAN5uDrG0RJqfFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-50">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <img src="path/to/logo.png" alt="Logo" class="h-10">
+                    <span class="ml-3 text-xl font-bold text-gray-800">Your Brand</span>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex flex-1 mx-10">
+                    <div class="relative w-full">
+                        <input type="text" placeholder='Search "Belts"' class="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        <button class="absolute inset-y-0 right-0 flex items-center pr-3 text-yellow-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Icons -->
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-800">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars fa-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Links -->
+        <nav class="bg-gray-100">
+            <div class="container mx-auto px-4 py-2 flex justify-center space-x-8 hidden md:flex">
+                <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">BEST SELLER</a>
+                <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">RECENTLY LAUNCHED</a>
+                <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">ALL PRODUCTS</a>
+                <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">SPORTS</a>
+                <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">CONTACT US</a>
+                <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">TRACK ORDER</a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden bg-gray-100 py-4 hidden">
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50">BEST SELLER</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50">RECENTLY LAUNCHED</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50">ALL PRODUCTS</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50">SPORTS</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50">CONTACT US</a>
+                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-yellow-50">TRACK ORDER</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

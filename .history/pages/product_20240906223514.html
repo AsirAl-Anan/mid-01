@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Container -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="flex space-x-6">
+            
+            <!-- Filters Section -->
+            <div class="w-1/4">
+                <h2 class="font-semibold text-lg mb-4">FILTERS</h2>
+
+                <!-- Filter options -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="font-medium text-gray-700">Availability</label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                            <option>In stock</option>
+                            <option>Out of stock</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="font-medium text-gray-700">Price</label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                            <option>Low to High</option>
+                            <option>High to Low</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="font-medium text-gray-700">Size</label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="font-medium text-gray-700">Gender</label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                            <option>Men</option>
+                            <option>Women</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="font-medium text-gray-700">Color</label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                            <option>Red</option>
+                            <option>Blue</option>
+                            <option>Black</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="font-medium text-gray-700">Product type</label>
+                        <select class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
+                            <option>Sneakers</option>
+                            <option>Boots</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div class="w-3/4">
+                <h2 class="font-semibold text-lg mb-4">419 products</h2>
+                
+                <!-- Grid of Products -->
+                <div class="grid grid-cols-3 gap-6">
+                    <!-- Product Card -->
+                    <div class="bg-white shadow-md rounded-md overflow-hidden">
+                        <div class="relative">
+                            <img src="https://via.placeholder.com/300" alt="Product Image" class="w-full h-64 object-cover">
+                            <div class="absolute top-2 left-2 bg-orange-500 text-white px-2 py-1 text-xs font-bold rounded">SAVE 50%</div>
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold">Product Name</h3>
+                            <p class="text-sm text-gray-600">Kick Up Your Game with Comfort and Style</p>
+                            <div class="mt-2">
+                                <span class="text-gray-500 line-through">Rs. 4,999.00</span>
+                                <span class="text-xl font-bold text-red-600">Rs. 2,499.00</span>
+                            </div>
+                            <div class="mt-2 flex items-center">
+                                <span class="text-yellow-500">★★★★★</span>
+                                <span class="ml-2 text-sm text-gray-500">(1)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat product card structure for other products -->
+                    <!-- You can add more products in a similar structure as above -->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

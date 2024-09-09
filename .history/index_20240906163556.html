@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a3592fbd7b.js" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <!-- Small/Medium Device Searchbar Navbar -->
+
+</head>
+
+<body class="bg-gray-50">
+  <header class="bg-white shadow">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4 md:py-6">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <img src="img/logo/Adidas_Logo.png" alt="Logo" class="h-10">
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative flex-1 hidden md:block mx-5">
+          <div class="flex items-center">
+            <input type="text" placeholder='Search "Sneakers"'
+              class="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+            <button class="absolute inset-y-0 right-0 flex items-center pr-3 text-yellow-600">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Icons -->
+        <div class="flex items-center space-x-4">
+          <a href="#" class="text-gray-600 hover:text-gray-800 hidden md:inline-block">
+            <i class="fa-regular fa-message"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-800 hidden md:inline-block">
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-800 hidden md:inline-block">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+          <button class="text-gray-600 hover:text-gray-800 md:hidden mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navbar Links -->
+    <nav class="bg-gray-100 hidden md:block">
+      <div class="container mx-auto px-4 py-2 flex justify-center space-x-8">
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">BEST SELLER</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">RECENTLY LAUNCHED</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">ALL PRODUCTS</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">SPORTS</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">CONTACT US</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">TRACK ORDER</a>
+      </div>
+    </nav>
+
+    <!-- Small/Medium Device Searchbar Navbar -->
+    <nav class="bg-gray-100 md:hidden">
+      <div class="container mx-auto px-4 py-2 flex items-center">
+        <div class="relative flex-1">
+          <div class="flex items-center">
+            <button class="absolute inset-y-0 left-0 flex items-center pl-3 text-yellow-600">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input type="text" placeholder='Search "Sneakers"'
+              class="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden">
+      <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">BEST SELLER</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">RECENTLY LAUNCHED</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">ALL PRODUCTS</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">SPORTS</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">CONTACT US</a>
+        <a href="#" class="text-gray-700 hover:text-yellow-600 font-semibold">TRACK ORDER</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Carousel Container -->
+  <div class="relative w-full overflow-hidden">
+    <!-- Carousel Inner -->
+    <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+      <!-- Slide 1 -->
+      <div class="flex-shrink-0 w-full">
+        <img src="img/carousel/Akash_KAWAII_Banner.webp" class="w-full h-auto object-cover" alt="Slide 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="flex-shrink-0 w-full">
+        <img src="img/carousel/Patch_Play_Web_Banner_2.webp" class="w-full h-auto object-cover" alt="Slide 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="flex-shrink-0 w-full">
+        <img src="img/carousel/Spectra_Banner_WEB.webp" class="w-full h-auto object-cover" alt="Slide 3" />
+      </div>
+      <!-- Add  slide -->
+    </div>
+
+    <!-- Carousel Pagination Dots -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <button
+        class="w-3 h-3 rounded-full bg-gray-300 transition-colors duration-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400"
+        id="dot-1"></button>
+      <button
+        class="w-3 h-3 rounded-full bg-gray-300 transition-colors duration-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400"
+        id="dot-2"></button>
+      <button
+        class="w-3 h-3 rounded-full bg-gray-300 transition-colors duration-300 hover:bg-gray-400 focus:outline-none focus:bg-gray-400"
+        id="dot-3"></button>
+      <!-- Add dots  -->
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="relative bg-white">
+    <!-- Hero Images -->
+    <div class="flex flex-wrap lg:flex-nowrap ">
+      <div class="w-full ">
+        <img src="img/hero/Screenshot_20240905_122311.png" alt="Left Image" class="object-cover w-full h-full" />
+
+      </div>
+    </div>
+
+    <!-- Hero Text -->
+    <div class="justify-center text-center p-6 lg:p-12">
+      <h1 class="text-5xl lg:text-6xl font-bold text-black">WINNING HITS DIFFERENT</h1>
+      <p class="mt-4 text-lg lg:text-xl text-gray-600">Icons built for the bright lights, on and off the court.</p>
+      <div class="mt-8">
+        <a href="#" class="px-8 py-3 bg-black text-white text-lg font-semibold rounded-full hover:bg-gray-800">Shop</a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container mx-auto py-8">
+
+    <p class="text-center text-3xl lg:text-5xl m-5 ">Explore</p>
+    <!-- Tab Navigation -->
+    <div class="flex justify-center mb-6">
+      <button id="tab-best-seller" class="px-2 md:px-6 py-2 text-sm md:text-lg border-b-4 border-black focus:outline-none"
+        onclick="changeTab('best-seller')">BEST SELLER</button>
+      <button id="tab-new-in"
+        class="px-2 md:px-6 py-2 text-sm md:text-lg border-b-4 border-transparent hover:border-black focus:outline-none"
+        onclick="changeTab('new-in')">NEW IN</button>
+      <button id="tab-women"
+        class="px-2 md:px-6 py-2  text-sm md:text-lg border-b-4 border-transparent hover:border-black focus:outline-none"
+        onclick="changeTab('women')">WOMEN</button>
+      <button id="tab-oversized"
+        class="px-2  md:px-6 py-2  text-sm md:text-lg border-b-4 border-transparent hover:border-black focus:outline-none"
+        onclick="changeTab('oversized')">OVERSIZED TEE</button>
+      <button id="tab-belts"
+        class="px-2 md:px-6 py-2  text-sm md:text-lg border-b-4 border-transparent hover:border-black focus:outline-none"
+        onclick="changeTab('belts')">WOMEN BELTS</button>
+    </div>
+
+    <!-- Product Grid (Tabs Content) -->
+    <div id="best-seller" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+      <!-- Products -->
+      <div class="bg-white shadow p-4 flex flex-col">
+        <div class="h-[350px] w-full flex items-center justify-center mb-4">
+            <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+        </div>
+        <div class="flex-grow">
+            <p class="text-sm text-gray-500">SAVE 50%</p>
+            <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+            <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+            <p class="text-lg font-semibold mt-1">
+                <span class="text-3xl inline">৳</span> 2,499.00 
+                <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 4,999.00
+                </span>
+            </p>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+            <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+                Add to Cart
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+            </button>
+            <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                Buy Now!
+            </button>
+        </div>
+    </div>
+    <div class="bg-white shadow p-4 flex flex-col">
+      <div class="h-[350px] w-full flex items-center justify-center mb-4">
+          <img src="img/products/shoe2.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="flex-grow">
+          <p class="text-sm text-gray-500">SAVE 50%</p>
+          <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+          <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+          <p class="text-lg font-semibold mt-1">
+              <span class="text-3xl inline">৳</span> 2,499.00 
+              <span class="line-through text-gray-400">
+                  <span class="text-3xl inline">৳</span> 4,999.00
+              </span>
+          </p>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+          <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+              Add to Cart
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+          </button>
+          <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+              Buy Now!
+          </button>
+      </div>
+  </div>
+  <div class="bg-white shadow p-4 flex flex-col">
+    <div class="h-[350px] w-full flex items-center justify-center mb-4">
+        <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+    </div>
+    <div class="flex-grow">
+        <p class="text-sm text-gray-500">SAVE 50%</p>
+        <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+        <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+        <p class="text-lg font-semibold mt-1">
+            <span class="text-3xl inline">৳</span> 2,499.00 
+            <span class="line-through text-gray-400">
+                <span class="text-3xl inline">৳</span> 4,999.00
+            </span>
+        </p>
+    </div>
+    <div class="flex justify-between items-center mt-4">
+        <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+            Add to Cart
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+        </button>
+        <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+            Buy Now!
+        </button>
+    </div>
+</div>
+<div class="bg-white shadow p-4 flex flex-col">
+  <div class="h-[350px] w-full flex items-center justify-center mb-4">
+      <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+  </div>
+  <div class="flex-grow">
+      <p class="text-sm text-gray-500">SAVE 50%</p>
+      <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+      <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+      <p class="text-lg font-semibold mt-1">
+          <span class="text-3xl inline">৳</span> 2,499.00 
+          <span class="line-through text-gray-400">
+              <span class="text-3xl inline">৳</span> 4,999.00
+          </span>
+      </p>
+  </div>
+  <div class="flex justify-between items-center mt-4">
+      <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+          Add to Cart
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>
+      </button>
+      <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+          Buy Now!
+      </button>
+  </div>
+</div>
+      <!-- more products  -->
+    </div>
+
+    <div id="new-in" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white shadow p-4 flex flex-col">
+        <div class="h-[350px] w-full flex items-center justify-center mb-4">
+            <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+        </div>
+        <div class="flex-grow">
+            <p class="text-sm text-gray-500">SAVE 50%</p>
+            <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+            <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+            <p class="text-lg font-semibold mt-1">
+                <span class="text-3xl inline">৳</span> 2,499.00 
+                <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 4,999.00
+                </span>
+            </p>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+            <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+                Add to Cart
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+            </button>
+            <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                Buy Now!
+            </button>
+        </div>
+    </div>
+    <div class="bg-white shadow p-4 flex flex-col">
+      <div class="h-[350px] w-full flex items-center justify-center mb-4">
+          <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="flex-grow">
+          <p class="text-sm text-gray-500">SAVE 50%</p>
+          <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+          <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+          <p class="text-lg font-semibold mt-1">
+              <span class="text-3xl inline">৳</span> 2,499.00 
+              <span class="line-through text-gray-400">
+                  <span class="text-3xl inline">৳</span> 4,999.00
+              </span>
+          </p>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+          <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+              Add to Cart
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+          </button>
+          <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+              Buy Now!
+          </button>
+      </div>
+  </div>
+  <div class="bg-white shadow p-4 flex flex-col">
+    <div class="h-[350px] w-full flex items-center justify-center mb-4">
+        <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+    </div>
+    <div class="flex-grow">
+        <p class="text-sm text-gray-500">SAVE 50%</p>
+        <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+        <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+        <p class="text-lg font-semibold mt-1">
+            <span class="text-3xl inline">৳</span> 2,499.00 
+            <span class="line-through text-gray-400">
+                <span class="text-3xl inline">৳</span> 4,999.00
+            </span>
+        </p>
+    </div>
+    <div class="flex justify-between items-center mt-4">
+        <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+            Add to Cart
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+        </button>
+        <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+            Buy Now!
+        </button>
+    </div>
+</div>
+<div class="bg-white shadow p-4 flex flex-col">
+  <div class="h-[350px] w-full flex items-center justify-center mb-4">
+      <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+  </div>
+  <div class="flex-grow">
+      <p class="text-sm text-gray-500">SAVE 50%</p>
+      <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+      <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+      <p class="text-lg font-semibold mt-1">
+          <span class="text-3xl inline">৳</span> 2,499.00 
+          <span class="line-through text-gray-400">
+              <span class="text-3xl inline">৳</span> 4,999.00
+          </span>
+      </p>
+  </div>
+  <div class="flex justify-between items-center mt-4">
+      <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+          Add to Cart
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>
+      </button>
+      <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+          Buy Now!
+      </button>
+  </div>
+</div>
+    </div>
+
+    <div id="women" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white shadow p-4 flex flex-col">
+        <div class="h-[350px] w-full flex items-center justify-center mb-4">
+            <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+        </div>
+        <div class="flex-grow">
+            <p class="text-sm text-gray-500">SAVE 50%</p>
+            <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+            <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+            <p class="text-lg font-semibold mt-1">
+                <span class="text-3xl inline">৳</span> 2,499.00 
+                <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 4,999.00
+                </span>
+            </p>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+            <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+                Add to Cart
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+            </button>
+            <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                Buy Now!
+            </button>
+        </div>
+    </div>
+    <div class="bg-white shadow p-4 flex flex-col">
+      <div class="h-[350px] w-full flex items-center justify-center mb-4">
+          <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="flex-grow">
+          <p class="text-sm text-gray-500">SAVE 50%</p>
+          <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+          <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+          <p class="text-lg font-semibold mt-1">
+              <span class="text-3xl inline">৳</span> 2,499.00 
+              <span class="line-through text-gray-400">
+                  <span class="text-3xl inline">৳</span> 4,999.00
+              </span>
+          </p>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+          <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+              Add to Cart
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+          </button>
+          <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+              Buy Now!
+          </button>
+      </div>
+  </div>
+  <div class="bg-white shadow p-4 flex flex-col">
+    <div class="h-[350px] w-full flex items-center justify-center mb-4">
+        <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+    </div>
+    <div class="flex-grow">
+        <p class="text-sm text-gray-500">SAVE 50%</p>
+        <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+        <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+        <p class="text-lg font-semibold mt-1">
+            <span class="text-3xl inline">৳</span> 2,499.00 
+            <span class="line-through text-gray-400">
+                <span class="text-3xl inline">৳</span> 4,999.00
+            </span>
+        </p>
+    </div>
+    <div class="flex justify-between items-center mt-4">
+        <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+            Add to Cart
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+        </button>
+        <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+            Buy Now!
+        </button>
+    </div>
+</div>
+<div class="bg-white shadow p-4 flex flex-col">
+  <div class="h-[350px] w-full flex items-center justify-center mb-4">
+      <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+  </div>
+  <div class="flex-grow">
+      <p class="text-sm text-gray-500">SAVE 50%</p>
+      <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+      <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+      <p class="text-lg font-semibold mt-1">
+          <span class="text-3xl inline">৳</span> 2,499.00 
+          <span class="line-through text-gray-400">
+              <span class="text-3xl inline">৳</span> 4,999.00
+          </span>
+      </p>
+  </div>
+  <div class="flex justify-between items-center mt-4">
+      <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+          Add to Cart
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>
+      </button>
+      <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+          Buy Now!
+      </button>
+  </div>
+</div>
+
+    </div>
+
+    <div id="oversized" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white shadow p-4 flex flex-col">
+        <div class="h-[350px] w-full flex items-center justify-center mb-4">
+            <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+        </div>
+        <div class="flex-grow">
+            <p class="text-sm text-gray-500">SAVE 50%</p>
+            <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+            <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+            <p class="text-lg font-semibold mt-1">
+                <span class="text-3xl inline">৳</span> 2,499.00 
+                <span class="line-through text-gray-400">
+                    <span class="text-3xl inline">৳</span> 4,999.00
+                </span>
+            </p>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+            <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+                Add to Cart
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+            </button>
+            <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                Buy Now!
+            </button>
+        </div>
+    </div>
+    <div class="bg-white shadow p-4 flex flex-col">
+      <div class="h-[350px] w-full flex items-center justify-center mb-4">
+          <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="flex-grow">
+          <p class="text-sm text-gray-500">SAVE 50%</p>
+          <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+          <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+          <p class="text-lg font-semibold mt-1">
+              <span class="text-3xl inline">৳</span> 2,499.00 
+              <span class="line-through text-gray-400">
+                  <span class="text-3xl inline">৳</span> 4,999.00
+              </span>
+          </p>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+          <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+              Add to Cart
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+          </button>
+          <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+              Buy Now!
+          </button>
+      </div>
+  </div>
+  <div class="bg-white shadow p-4 flex flex-col">
+    <div class="h-[350px] w-full flex items-center justify-center mb-4">
+        <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+    </div>
+    <div class="flex-grow">
+        <p class="text-sm text-gray-500">SAVE 50%</p>
+        <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+        <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+        <p class="text-lg font-semibold mt-1">
+            <span class="text-3xl inline">৳</span> 2,499.00 
+            <span class="line-through text-gray-400">
+                <span class="text-3xl inline">৳</span> 4,999.00
+            </span>
+        </p>
+    </div>
+    <div class="flex justify-between items-center mt-4">
+        <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+            Add to Cart
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+        </button>
+        <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+            Buy Now!
+        </button>
+    </div>
+</div>
+<div class="bg-white shadow p-4 flex flex-col">
+  <div class="h-[350px] w-full flex items-center justify-center mb-4">
+      <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+  </div>
+  <div class="flex-grow">
+      <p class="text-sm text-gray-500">SAVE 50%</p>
+      <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+      <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+      <p class="text-lg font-semibold mt-1">
+          <span class="text-3xl inline">৳</span> 2,499.00 
+          <span class="line-through text-gray-400">
+              <span class="text-3xl inline">৳</span> 4,999.00
+          </span>
+      </p>
+  </div>
+  <div class="flex justify-between items-center mt-4">
+      <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+          Add to Cart
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>
+      </button>
+      <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+          Buy Now!
+      </button>
+  </div>
+</div>
+
+
+    
+  
+  
+  
+  </div>
+
+
+  <div id="belts" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white shadow p-4 flex flex-col">
+      <div class="h-[350px] w-full flex items-center justify-center mb-4">
+          <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+      </div>
+      <div class="flex-grow">
+          <p class="text-sm text-gray-500">SAVE 50%</p>
+          <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+          <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+          <p class="text-lg font-semibold mt-1">
+              <span class="text-3xl inline">৳</span> 2,499.00 
+              <span class="line-through text-gray-400">
+                  <span class="text-3xl inline">৳</span> 4,999.00
+              </span>
+          </p>
+      </div>
+      <div class="flex justify-between items-center mt-4">
+          <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+              Add to Cart
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>
+          </button>
+          <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+              Buy Now!
+          </button>
+      </div>
+  </div>
+  <div class="bg-white shadow p-4 flex flex-col">
+    <div class="h-[350px] w-full flex items-center justify-center mb-4">
+        <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+    </div>
+    <div class="flex-grow">
+        <p class="text-sm text-gray-500">SAVE 50%</p>
+        <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+        <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+        <p class="text-lg font-semibold mt-1">
+            <span class="text-3xl inline">৳</span> 2,499.00 
+            <span class="line-through text-gray-400">
+                <span class="text-3xl inline">৳</span> 4,999.00
+            </span>
+        </p>
+    </div>
+    <div class="flex justify-between items-center mt-4">
+        <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+            Add to Cart
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+            </svg>
+        </button>
+        <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+            Buy Now!
+        </button>
+    </div>
+</div>
+<div class="bg-white shadow p-4 flex flex-col">
+  <div class="h-[350px] w-full flex items-center justify-center mb-4">
+      <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+  </div>
+  <div class="flex-grow">
+      <p class="text-sm text-gray-500">SAVE 50%</p>
+      <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+      <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+      <p class="text-lg font-semibold mt-1">
+          <span class="text-3xl inline">৳</span> 2,499.00 
+          <span class="line-through text-gray-400">
+              <span class="text-3xl inline">৳</span> 4,999.00
+          </span>
+      </p>
+  </div>
+  <div class="flex justify-between items-center mt-4">
+      <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+          Add to Cart
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>
+      </button>
+      <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+          Buy Now!
+      </button>
+  </div>
+</div>
+<div class="bg-white shadow p-4 flex flex-col">
+<div class="h-[350px] w-full flex items-center justify-center mb-4">
+    <img src="img/products/shoe1.png" alt="Product 1" class="max-h-full max-w-full object-contain">
+</div>
+<div class="flex-grow">
+    <p class="text-sm text-gray-500">SAVE 50%</p>
+    <h3 class="text-lg font-bold">Bacca Bucci Spectra Men's Sneakers</h3>
+    <p class="text-sm text-gray-600">Kick Up Your Game with Comfy Clouds and Edgy Vibes</p>
+    <p class="text-lg font-semibold mt-1">
+        <span class="text-3xl inline">৳</span> 2,499.00 
+        <span class="line-through text-gray-400">
+            <span class="text-3xl inline">৳</span> 4,999.00
+        </span>
+    </p>
+</div>
+<div class="flex justify-between items-center mt-4">
+    <button class="bg-black text-white text-sm px-6 py-2 rounded-full flex items-center justify-center gap-2 hover:bg-gray-600 transition-colors duration-300">
+        Add to Cart
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+        </svg>
+    </button>
+    <button class="bg-orange-500 text-white text-sm px-6 py-2 rounded-full hover:bg-orange-600 transition-colors duration-300">
+        Buy Now!
+    </button>
+</div>
+</div>
+
+
+  
+
+
+
+</div>
+</div>
+<p class="text-4xl text-center m-5 ">About us</p>
+
+<section class="relative py-16 mt-10">
+    <!-- Background Image -->
+    <div class="absolute inset-0 h-[45vh] bg-gray-900">
+      <img src="img/about/DALL·E 2024-09-05 23.44.28 - An aesthetic sports-themed banner for an ecommerce website called 'Addidas' that sells shoes. The banner should feature a sleek, modern design with at.webp" alt="Background" class="w-full h-full object-cover opacity-50">
+    </div>
+  
+    <!-- Content container -->
+    <div class="relative container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8">
+      <!-- Overlayed Image -->
+      <div class="relative w-full md:w-1/2 lg:w-1/3 z-10 mb-8 md:mb-0 flex justify-center md:justify-start">
+        <div class="relative">
+          <!-- CEO Image -->
+          <img src="img/about/ceo.jpg" alt="Person" class="rounded-lg mt-[-40px] md:mt-[-80px] shadow-lg w-[150px] md:w-[220px] h-auto z-20">
+  
+          <!-- Underlay Image -->
+          <img src="img/about/ceo2.jpg" alt="Underlay" class="absolute top-[60px] md:top-[100px] left-[70px] md:left-[100px] rounded-lg shadow-lg w-[160px] md:w-[200px] h-auto z-10">
+        </div>
+      </div>
+  
+      <!-- Text Content -->
+      <div class="bg-gray-800 text-white p-6 sm:p-8 w-full md:w-1/2 lg:w-2/3 md:pl-12 rounded-lg relative z-20 mt-10 md:mt-0">
+        <blockquote class="text-base sm:text-lg md:text-xl font-medium italic mb-4">
+          "Gravida quam mi erat tortor neque molestie. Auctor aliquet at porttitor a enim nunc suscipit tincidunt nunc."
+        </blockquote>
+        <p class="text-sm sm:text-lg font-semibold">Judith & Amanda</p>
+        <p class="text-gray-400 text-xs sm:text-sm">CEO & CTO of Addidas</p>
+      </div>
+    </div>
+  </section>
+  
+   <!-- Newsletter Section -->
+   <section 
+   class="relative bg-cover bg-center py-16" 
+   style="background-image: url('https://yourimageurl.com');" 
+     >
+   <div class="max-w-7xl mx-auto px-6">
+       <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row justify-between items-center">
+           <!-- Left Side: Text -->
+           <div class="mb-6 md:mb-0">
+               <h2 class="text-xl font-semibold text-gray-800">SUBSCRIBE TO OUR NEWSLETTER</h2>
+               <p class="mt-2 text-gray-600">Promotions, new products, and sales. Directly to your inbox.</p>
+           </div>
+
+           <!-- Right Side: Subscription Form -->
+           <div class="flex items-center space-x-4 w-full md:w-auto">
+               <input 
+                   type="email" 
+                   placeholder="Your e-mail" 
+                   class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500"
+               >
+               <button class="bg-yellow-500 text-white font-semibold px-6 py-2 rounded-md hover:bg-yellow-600">
+                   SUBSCRIBE
+               </button>
+           </div>
+       </div>
+   </div>
+</section>
+
+
+
+  <footer class="bg-gray-900 text-white py-10  sm:mt-[30px] lg:mt-[120px]">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <!-- Left Section -->
+        <div class="mb-6 md:mb-0">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="img/logo/Adidas_Logo.png" alt="Logo" class="w-10 h-10 bg-white " >
+                <span class="text-lg font-semibold">Download the App</span>
+            </a>
+        </div>
+        <!-- Middle Section -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold mb-4">Shop</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Gift cards</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Addidas Registry</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Sitemap</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Addidas Blog</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Addidas United Kingdom</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Addidas Germany</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Addidas Canada</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Sell</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Sell on Addidas</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Teams</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Forums</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Affiliates & Creators</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">About</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Addidas, Inc.</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Policies</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Investors</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Careers</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Press</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Impact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold mb-4">Help</h3>
+                <ul>
+                    <li><a href="#" class="hover:text-gray-400">Help Center</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Privacy Settings</a></li>
+                    <li class="mt-4 flex space-x-3">
+                        <!-- Social Icons -->
+                        <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fab fa-pinterest"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="border-t border-gray-800 mt-8 pt-6 text-sm text-gray-500 text-center">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div>&copy; 2024 Addidas. All Rights Reserved.</div>
+            <div class="space-x-3 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gray-400">Terms of Use</a>
+                <a href="#" class="hover:text-gray-400">Privacy</a>
+                <a href="#" class="hover:text-gray-400">Local Shops</a>
+                <a href="#" class="hover:text-gray-400">Regions</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>

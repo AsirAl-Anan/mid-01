@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Grid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+ 
+    <script src="https://kit.fontawesome.com/a3592fbd7b.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+    
+  </head>
+  <body class="bg-gray-100">
+    <!-- navbar -->
+
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center py-4 md:py-6">
+            <!-- Logo -->
+            <div class="flex items-center">
+              <img src="../img/logo/Adidas_Logo.png" alt="Logo" class="h-10">
+            </div>
+    
+            <!-- Search Bar -->
+            <div class="relative flex-1 hidden md:block mx-5">
+              <div class="flex items-center">
+                <input type="text" placeholder='Search "Sneakers"'
+                  class="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+                <button class="absolute inset-y-0 right-0 flex items-center pr-3 text-yellow-600">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </div>
+    
+            <!-- Icons -->
+            <div class="flex items-center space-x-4">
+              <a href="#" class="text-gray-600 hover:text-gray-800 hidden md:inline-block">
+                <i class="fa-regular fa-message"></i>
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-800 hidden md:inline-block">
+                <i class="fa-regular fa-user"></i>
+              </a>
+              <a href="#" class="text-gray-600 hover:text-gray-800 relative " id="cartToggle">
+                <i class="fa-solid fa-cart-shopping text-xl"  ></i>
+                <span class="absolute top-4 left-3 inline-block w-5 h-5 text-xs font-bold text-white bg-red-600 rounded-full text-center "  id="cartCount">
+                  0
+                </span>
+              </a>
+              
+              <button class="text-gray-600 hover:text-gray-800 md:hidden mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Navbar Links -->
+        <nav class="bg-gray-100 hidden md:block">
+          <div class="container mx-auto px-4 py-2 flex justify-center space-x-8">
+            <a href="../index.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">HOME</a>
+            <a href="under-construction.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">RECENTLY LAUNCHED</a>
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">ALL PRODUCTS</a>
+            <a href="under-construction.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">SPORTS</a>
+            <a href="contact.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">CONTACT US</a>
+            <a href="../index.html#about" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">ABOUT US</a>
+          </div>
+        </nav>
+    
+        <!-- Small/Medium Device Searchbar Navbar -->
+        <nav class="bg-gray-100 md:hidden">
+          <div class="container mx-auto px-4 py-2 flex items-center">
+            <div class="relative flex-1">
+              <div class="flex items-center">
+                <button class="absolute inset-y-0 left-0 flex items-center pl-3 text-yellow-600">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <input type="text" placeholder='Search "Sneakers"'
+                  class="w-full border rounded-full py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-yellow-500" />
+              </div>
+            </div>
+          </div>
+        </nav>
+    
+        <!-- Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+          <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+            <a href="../index.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">HOME</a>
+            <a href="under-construction.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">RECENTLY LAUNCHED</a>
+            <a href="#" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">ALL PRODUCTS</a>
+            <a href="under-construction.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">SPORTS</a>
+            <a href="contact.html" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">CONTACT US</a>
+            <a href="../index.html#about" class="text-gray-700 text-sm lg:text-base hover:text-yellow-600 font-semibold">ABOUT US</a>
+          </div>
+        </div>
+      </header>
+    
+    
+  
+        <div class="container flex h-[70vh]">
+
+        </div>
+
+
+   
+
+    <!-- footer -->
+    <footer class="bg-gray-900 text-white py-10  ">
+      <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <!-- Left Section -->
+          <div class="mb-6 md:mb-0">
+              <a href="#" class="flex items-center space-x-3">
+                  <img src="../img/logo/Adidas_Logo.png" alt="Logo" class="w-10 h-10 bg-white " >
+                  <span class="text-lg font-semibold">Download the App</span>
+              </a>
+          </div>
+          <!-- Middle Section -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div>
+                  <h3 class="font-bold mb-4">Shop</h3>
+                  <ul>
+                      <li><a href="#" class="hover:text-gray-400">Gift cards</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Addidas Registry</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Sitemap</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Addidas Blog</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Addidas United Kingdom</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Addidas Germany</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Addidas Canada</a></li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="font-bold mb-4">Sell</h3>
+                  <ul>
+                      <li><a href="#" class="hover:text-gray-400">Sell on Addidas</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Teams</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Forums</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Affiliates & Creators</a></li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="font-bold mb-4">About</h3>
+                  <ul>
+                      <li><a href="#" class="hover:text-gray-400">Addidas, Inc.</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Policies</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Investors</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Careers</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Press</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Impact</a></li>
+                  </ul>
+              </div>
+              <div>
+                  <h3 class="font-bold mb-4">Help</h3>
+                  <ul>
+                      <li><a href="#" class="hover:text-gray-400">Help Center</a></li>
+                      <li><a href="#" class="hover:text-gray-400">Privacy Settings</a></li>
+                      <li class="mt-4 flex space-x-3">
+                          <!-- Social Icons -->
+                          <a href="#" class="hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                          <a href="#" class="hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+                          <a href="#" class="hover:text-gray-400"><i class="fab fa-pinterest"></i></a>
+                          <a href="#" class="hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+                          <a href="#" class="hover:text-gray-400"><i class="fab fa-youtube"></i></a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  
+      <!-- Bottom Section -->
+      <div class="border-t border-gray-800 mt-8 pt-6 text-sm text-gray-500 text-center">
+          <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+              <div>&copy; 2024 Addidas. All Rights Reserved.</div>
+              <div class="space-x-3 mt-4 md:mt-0">
+                  <a href="#" class="hover:text-gray-400">Terms of Use</a>
+                  <a href="#" class="hover:text-gray-400">Privacy</a>
+                  <a href="#" class="hover:text-gray-400">Local Shops</a>
+                  <a href="#" class="hover:text-gray-400">Regions</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </body>
+</html>
